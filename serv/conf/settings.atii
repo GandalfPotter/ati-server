@@ -11,6 +11,7 @@ $GLOBALS['prefs'] = array(
 
 	'maxThreadedChildren' => 3,
 	'port' => '8000',
+	'mode' => 'ftp',
 
 //***************** Default Headers ***************
 
@@ -164,10 +165,23 @@ $GLOBALS['prefs'] = array(
 			'imagemagickpath' => '/usr/local/bin/',
 			'amazon_web_services' => array('key' => '', 'secret_key' => ''),
 		),
+		'production' => array(
+			'server' => 'production',
+			'superDomain' => '.loc',
+			'database' => array('type' => 'mysqli', 'user' => 'root', 'pass' => 'amogus', 'serverdb' => 'atidb', 'host' => 'localhost', 'prefix' => '', 'socket' => ''),
+			'imagemagickpath' => '/usr/local/bin/',
+			'amazon_web_services' => array('key' => '', 'secret_key' => ''),
+		),
+	),
 
-		'production' => array( /* defined in settings_secret file included below */),
+//************** goofy ah shit *****************8
+	'server' => array(
+		'children' => array(
+			'hehe' => 'fuck my life',
+		),
 	)
 
 );
 
-require 'settings_secret.atii';
+//goddammit why didnt aub include this file??!!??!?!?
+//require 'settings_secret.atii';
