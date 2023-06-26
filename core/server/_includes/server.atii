@@ -127,7 +127,7 @@ function processRequest() {
 }
 
 function sendPage($content='',$headers='') {
-	if($headers) $_SERVER['headers'] += $headers;
+	if($headers) $_SERVER['headers'] = $headers;
 	$temp = sendHeaders().$content;
 	socket_write($_SERVER['socket'],$temp);
 	if(socket_last_error($_SERVER['socket'])) logMessage('A socket had a problem: '.socket_strerror(socket_last_error($_SERVER['socket'])));
