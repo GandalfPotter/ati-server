@@ -2,7 +2,8 @@
 // Generic Pear Module
 // This module contains alternative Pear commands.
 
-eval('class pear_EXTENDER extends ' . $last_module . '_ADOConnection { }');
+//eval('class pear_EXTENDER extends ' . $last_module . '_ADOConnection { }');
+class pear_EXTENDER extends ADOConnection { }
 
 class pear_ADOConnection extends pear_EXTENDER
 {
@@ -127,9 +128,10 @@ class pear_ADOConnection extends pear_EXTENDER
 
 }
 
-eval('class pear_resultset_EXTENDER extends ' . $last_module . '_ResultSet { }');
+//eval('class pear_resultset_EXTENDER extends ' . $last_module . '_ResultSet { }');
+//class pear_resultset_EXTENDER extends ResultSet { }
 
-class pear_ResultSet extends pear_resultset_EXTENDER
+class pear_ResultSet //extends pear_resultset_EXTENDER
 {
 	/**
 	* PEAR DB Compatable Command
