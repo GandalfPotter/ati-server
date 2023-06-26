@@ -185,3 +185,5 @@ $GLOBALS['prefs'] = array(
 
 //goddammit why didnt aub include this file??!!??!?!?
 //require 'settings_secret.atii';
+
+?>
